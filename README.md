@@ -1,9 +1,9 @@
-# Install node (if required)
+# Install node (if required) ja
 ```bash
 cd ~
 curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
-sudo apt install nodejs
+sudo apt install nodej
 ```
 
 # GETTING STARTED
