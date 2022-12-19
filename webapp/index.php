@@ -1,5 +1,6 @@
 <?php $page_title = "Home ★ Productive"; ?>
 <?php require "view/blocks/page_start.php"; ?>
+<meta name="categoryType" content="0" />
 <h1>Welcome to Productive!</h1>
 <script> 
     function filtration() {
@@ -8,6 +9,7 @@
     }     
     else{
         console.log("Ne");
+        window.location='indexCat.php';
     }        
 }
 </script> 
@@ -26,7 +28,6 @@
         </tr>
 </table>
 <script src="controller/productsMain.js"></script>
-<!-- <script src="controller/categoriesMain.js"></script> -->
 <script src="controller/sortByAll.js"></script>
 <?php require "view/blocks/page_end.php"; ?>
 <!-- <script> 

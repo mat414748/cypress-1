@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<nav>
-			<a href="index.php">Home</a>
+			<a id="startich" href="index.php">Home</a>
 			<a href="products.php">Products</a>
 			<a href="categories.php">Categories</a>
 			<a id="login-status" href="#">Log In</a>

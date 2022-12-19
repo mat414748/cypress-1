@@ -24,10 +24,13 @@ function onProductsLoaded(request) {
 		activeCell.innerText = products[i].active;
 		productRowMain.appendChild(activeCell);
 
-		// var categoryCell = document.createElement("td");
-		// console.log(products[i])
-		// categoryCell.innerText = products[i].id_category;
-		// productRowMain.appendChild(categoryCell);
+		console.log(document.getElementsByName('categoryType'));
+		if (document.getElementsByName('categoryType')[0].content == "1") {
+			var categoryCell = document.createElement("td");
+			console.log(products[i])
+			categoryCell.innerText = products[i].id_category;
+			productRowMain.appendChild(categoryCell);
+		}
 
 		var priceCell = document.createElement("td");
 		priceCell.innerText = products[i].price ? products[i].price : "";
