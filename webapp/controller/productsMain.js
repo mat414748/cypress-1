@@ -24,13 +24,13 @@ function onProductsLoaded(request) {
 		activeCell.innerText = products[i].active;
 		productRowMain.appendChild(activeCell);
 
-		var categoryCell = document.createElement("td");
-		console.log(products[i])
-		categoryCell.innerText = products[i].id_category;
-		productRowMain.appendChild(categoryCell);
+		// var categoryCell = document.createElement("td");
+		// console.log(products[i])
+		// categoryCell.innerText = products[i].id_category;
+		// productRowMain.appendChild(categoryCell);
 
 		var priceCell = document.createElement("td");
-		priceCell.innerText = products[i].price ? "CHF " + products[i].price : "";
+		priceCell.innerText = products[i].price ? products[i].price : "";
 		productRowMain.appendChild(priceCell);
 
 		var stockCell = document.createElement("td");

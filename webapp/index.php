@@ -1,20 +1,33 @@
 <?php $page_title = "Home ★ Productive"; ?>
 <?php require "view/blocks/page_start.php"; ?>
 <h1>Welcome to Productive!</h1>
+<script> 
+    function filtration() {
+    if (document.getElementById("Filtr").value == "No filter"){
+        console.log("Da");
+    }     
+    else{
+        console.log("Ne");
+    }        
+}
+</script> 
+<select style="width: 280px" id="Filtr" onchange="filtration()">
+  <option selected="">No filter</option>
+  <option>With categories</option>
+</select>
 <table id="products-table-main">
         <tr>
             <th>SKU</th>
             <th>Name</th>
             <th>Active</th>
-            <th>Category</th>
             <th>Price</th>
             <th>Stock</th>
             <th>Actions</th>
         </tr>
 </table>
 <script src="controller/productsMain.js"></script>
-<script src="controller/sortByAll.js"></script>
 <!-- <script src="controller/categoriesMain.js"></script> -->
+<script src="controller/sortByAll.js"></script>
 <?php require "view/blocks/page_end.php"; ?>
 <!-- <script> 
     window.fizzbuzz = function (number) {
