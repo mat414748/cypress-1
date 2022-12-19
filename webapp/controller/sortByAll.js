@@ -1,8 +1,8 @@
-const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+const getCellValue = (tr, index) => tr.children[index].innerText || tr.children[index].textContent;
 
-const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
+const comparer = (index, asc) => (a, b) => ((v1, v2) => 
     v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+    )(getCellValue(asc ? a : b, index), getCellValue(asc ? b : a, index));
 
 // do the work...
 document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {

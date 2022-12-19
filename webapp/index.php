@@ -1,23 +1,22 @@
 <?php $page_title = "Home ★ Productive"; ?>
 <?php require "view/blocks/page_start.php"; ?>
 <h1>Welcome to Productive!</h1>
-<table>
-    <thead>
+<table id="products-table-main">
         <tr>
             <th>SKU</th>
             <th>Name</th>
             <th>Active</th>
+            <th>Category</th>
             <th>Price</th>
             <th>Stock</th>
             <th>Actions</th>
         </tr>
-    </thead>
-    <tbody id="products-table-main"></tbody>
 </table>
 <script src="controller/productsMain.js"></script>
 <script src="controller/sortByAll.js"></script>
+<!-- <script src="controller/categoriesMain.js"></script> -->
 <?php require "view/blocks/page_end.php"; ?>
-<script>
+<!-- <script> 
     window.fizzbuzz = function (number) {
         if (number % 3 == 0 && number % 5 == 0) {
             return 'FizzBuzz'
@@ -50,4 +49,4 @@
             return newArrayich
         } 
     }
-</script>
+</script> -->

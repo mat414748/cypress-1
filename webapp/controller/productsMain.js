@@ -1,12 +1,12 @@
 var productsTableMainPage = document.getElementById("products-table-main");
+
 /**
  * Called when the products loading request succeeded.
  * @param request The request object.
  */
 function onProductsLoaded(request) {
-	productsTableMainPage.innerHTML = "";
+	//productsTableMainPage.innerHTML = ``;
 	var products = JSON.parse(request.responseText);
-
 	for (var i = 0; i < products.length; i++) {
 		if (products[i].active == 1) {
 		var productRowMain = document.createElement("tr");
@@ -23,6 +23,11 @@ function onProductsLoaded(request) {
 		var activeCell = document.createElement("td");
 		activeCell.innerText = products[i].active;
 		productRowMain.appendChild(activeCell);
+
+		var categoryCell = document.createElement("td");
+		console.log(products[i])
+		categoryCell.innerText = products[i].id_category;
+		productRowMain.appendChild(categoryCell);
 
 		var priceCell = document.createElement("td");
 		priceCell.innerText = products[i].price ? "CHF " + products[i].price : "";
@@ -53,6 +58,7 @@ function onProductsLoaded(request) {
 		}
 	}
 }
+
 
 /**
  * Called when the products loading request failed.
