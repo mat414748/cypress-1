@@ -10,7 +10,7 @@ function onProductsLoaded(request) {
 
 	var products = JSON.parse(request.responseText);
 
-	for (var i = 0; i < products.length; i++) {
+	for (let i = 0; i < products.length; i++) {
 		var productRow = document.createElement("tr");
 		productsTable.appendChild(productRow);
 

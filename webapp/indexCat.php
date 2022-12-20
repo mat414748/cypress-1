@@ -25,7 +25,6 @@
             <th>Category</th>
             <th>Price</th>
             <th>Stock</th>
-            <th>Actions</th>
         </tr>
 </table>
 <script src="controller/productsMain.js"></script>

@@ -42,22 +42,6 @@ function onProductsLoaded(request) {
 		}
 		stockCell.innerText = products[i].stock;
 		productRowMain.appendChild(stockCell);
-
-		var actionsCell = document.createElement("td");
-		productRowMain.appendChild(actionsCell);
-
-		var deleteButton = document.createElement("button");
-		deleteButton.innerText = "Delete";
-		deleteButton.onclick = onDeleteButtonPressed;
-		deleteButton.className = "destructive";
-		deleteButton.setAttribute("product-sku", products[i].sku);
-		actionsCell.appendChild(deleteButton);
-
-		var editButton = document.createElement("a");
-		editButton.innerText = "Edit";
-		editButton.className = "button";
-		editButton.href = "product.php?sku=" + products[i].sku;
-		actionsCell.appendChild(editButton);
 		}
 	}
 }
