@@ -22,6 +22,7 @@
             <th>SKU</th>
             <th>Name</th>
             <th>Active</th>
+            <th>Image</th>
             <th>Price</th>
             <th>Stock</th>
         </tr>

@@ -23,6 +23,7 @@
             <th>Name</th>
             <th>Active</th>
             <th>Category</th>
+            <th>Image</th>
             <th>Price</th>
             <th>Stock</th>
         </tr>
