@@ -24,7 +24,7 @@ function onProductsLoaded(request) {
 		activeCell.innerText = products[i].active;
 		productRowMain.appendChild(activeCell);
 
-		console.log("JA DAUN");
+		console.log("JA");
 		if (document.getElementsByName('categoryType')[0].content == "1") {
 			var categoryCell = document.createElement("td");
 			console.log(products[i])
@@ -32,13 +32,15 @@ function onProductsLoaded(request) {
 			productRowMain.appendChild(categoryCell);
 		}
 
-		// const trueImage = document.createElement("img");
-		// trueImage.style.height = '100px';
-    	// trueImage.style.width = '100px';
-		// trueImage.src = products[i].product_image;
-		// var imageCell = document.createElement("td");
-		// imageCell.appendChild(trueImage);
-		// productRowMain.appendChild(imageCell);
+		const trueImage = document.createElement("img");
+		if (products[i].product_image.includes("http")) {
+			trueImage.src = products[i].product_image;
+			trueImage.style.height = '150px';
+    		trueImage.style.width = '200px';
+		}
+		var imageCell = document.createElement("td");
+		imageCell.appendChild(trueImage);
+		productRowMain.appendChild(imageCell);
 
 		var priceCell = document.createElement("td");
 		priceCell.innerText = products[i].price ? products[i].price : "";
