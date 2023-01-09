@@ -13,14 +13,14 @@ describe('Interface testing with login', () => {
   })
   it('Test with login', () => {
     cy.request('http://localhost/API/V1/Home').then((response) => {
-      console.log(response)
+      console.log(response.body)
     })
   })
 })
-/*describe('Interface testing without login', () => {
+describe('Interface testing without login', () => {
   it('Test without login', () => {
-    cy.request('http://localhost/API/V1/Products').then((response) => {
-      console.log(response)
+    cy.request('http://localhost/API/V1/NoLogHome').then((response) => {
+      console.log(response.body)
     })
   })
-})*/
+})

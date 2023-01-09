@@ -21,6 +21,11 @@
 		return $response;
 	});
 
+	$app->get("/NoLogHome", function (Request $request, Response $response, $args) {
+		require "product/homeList.php";
+		return $response;
+	});
+
 	/**
 	 * @OA\Get(
 	 *     path="/Product/{sku}",
