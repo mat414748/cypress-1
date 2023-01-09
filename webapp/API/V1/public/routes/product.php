@@ -15,6 +15,12 @@
 		return $response;
 	});
 
+	$app->get("/Home", function (Request $request, Response $response, $args) {
+		require "util/authentication.php";
+		require "product/homeList.php";
+		return $response;
+	});
+
 	/**
 	 * @OA\Get(
 	 *     path="/Product/{sku}",
